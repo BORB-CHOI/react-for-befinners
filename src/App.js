@@ -133,15 +133,20 @@ import Home from "./routes/Home";
 // };
 
 // .The Movie App.
+
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route
+          exact
+          path={`${process.env.PUBLIC_URL}/`}
+          Component={Home}
+        ></Route>
+        <Route
           path={`${process.env.PUBLIC_URL}/movie/:id`}
-          element={<Detail />}
-        />
-        <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+          Component={Detail}
+        ></Route>
       </Routes>
     </Router>
   );
