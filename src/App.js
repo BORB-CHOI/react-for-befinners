@@ -141,11 +141,11 @@ const App = () => {
         <Route
           exact
           path={`${process.env.PUBLIC_URL}/`}
-          Component={Home}
+          element={<Home />}
         ></Route>
         <Route
           path={`${process.env.PUBLIC_URL}/movie/:id`}
-          Component={Detail}
+          element={<Detail />}
         ></Route>
       </Routes>
     </Router>
